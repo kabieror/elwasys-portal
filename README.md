@@ -5,19 +5,15 @@
 Zum Weiterentwickeln der Software wird folgende Software benötigt:
 
 -	Java Development Kit 8
-
 	http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 
 -	Apache Maven
-
 	https://maven.apache.org/
 
 -	Eclipse EE
-
 	http://www.eclipse.org/downloads/
 
 -	Git, z.B. mit der Benutzeroberfläche SoureTree, oder GitKraken
-
 	https://www.sourcetreeapp.com/
 
 ### Vorbereitungen in Eclipse

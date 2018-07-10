@@ -3,3 +3,5 @@
 target/
 
 webportal\.iml
+
+src/main/webapp/VAADIN/themes/waschportal/styles\.scss\.cache
