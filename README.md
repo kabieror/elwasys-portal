@@ -1,8 +1,10 @@
-# elwasys Portal
+# elwasys Web Portal
 
-## Einrichten der Entwicklungsumgebung
+![Screenshot](https://raw.githubusercontent.com/kabieror/elwasys-portal/master/docs/screenshot-dashboard.png)
 
-Zum Weiterentwickeln der Software wird folgende Software benötigt:
+## Set up a Development Environment
+
+The following tool stack is recommended:
 
 -	Java Development Kit 8
 	http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
@@ -10,29 +12,25 @@ Zum Weiterentwickeln der Software wird folgende Software benötigt:
 -	Apache Maven
 	https://maven.apache.org/
 
--	Eclipse EE
-	http://www.eclipse.org/downloads/
+-	IntelliJ IDEA
+	https://www.jetbrains.com/idea/
 
--	Git, z.B. mit der Benutzeroberfläche SoureTree, oder GitKraken
-	https://www.sourcetreeapp.com/
+## Start the development server
 
-### Vorbereitungen in Eclipse
+### From the command line
 
-Damit Maven funktioniert, muss in Eclipse das installierte JDK als Ausführungs-Umgebung eingerichtet werden.
+```
+mvn jetty:run
+```
 
-1. Window > Preferences
-2. Java > Installed JREs
-3. "Add..." > Pfad zum installierten JDK 8 auswählen
-4. Java > Installed JREs > Execution Environments
-5. JavaSE-1.8 > Haken bei "jdk1.8[...]" setzen
-6. "OK" klicken
+### Within IntelliJ:
 
-### Run-Konfiguration für den Jetty-Server einrichten
+1. Run > Edit Configurations...
+2. Click the Plus icon
+3. Select "Maven"
+4. Set the working directory to be the root of the repository
+5. Set "Command line" to "jetty:run"
+6. Click "OK"
+7. Select the Run Configuration you just created and click the start arrow.
 
-1. Run > Run Configurations...
-2. "Maven Build": Rechtsklick > Neu...
-3. Name: Jetty Starten
-4. Base Directory: "${workspace_loc:/Waschportal}"
-5. Goals: "install jetty:run"
-
-Jetzt kann das Waschportal durck einen Klick auf den kleinen Pfeil neben dem grünen Start-Pfeil "Run As..." > "Start Jetty" gestartet werden und ist dann unter http://localhost:8080 erreichbar. Code-Änderungen werden automatisch auf den laufenden Server geladen.
+The web portal will be listening on port 8080. Access it via http://localhost:8080.
